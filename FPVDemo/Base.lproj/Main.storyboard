@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtm-g3-0w9">
-                                <rect key="frame" x="6" y="203" width="46" height="46"/>
+                                <rect key="frame" x="6" y="188" width="46" height="46"/>
                                 <state key="normal" image="droneCamera"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="AgE-sn-t1V"/>
