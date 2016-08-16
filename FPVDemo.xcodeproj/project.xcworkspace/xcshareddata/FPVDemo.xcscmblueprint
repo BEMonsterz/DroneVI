@@ -1,5 +1,5 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "EA7A75FA7EF8BEF432C72314545ECAB599863B43",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5DFC7ED62DF5E4A8010BD51A2A68B804BD2735E8",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
@@ -7,14 +7,16 @@
     "6B3CD325F9F4978D75503CA921567168E59DEABC" : 0,
     "34BB3D3039F51A78F84A3CAAFAD161821EE163F1" : 0,
     "EA7A75FA7EF8BEF432C72314545ECAB599863B43" : 0,
-    "F242303504B8CDD3CE213C5B3FFB052B596793AF" : 0
+    "F242303504B8CDD3CE213C5B3FFB052B596793AF" : 0,
+    "5DFC7ED62DF5E4A8010BD51A2A68B804BD2735E8" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CE898363-0BE1-468C-B255-69BCCA4D3A04",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "6B3CD325F9F4978D75503CA921567168E59DEABC" : "iOS-FPVDemo-Part2",
     "34BB3D3039F51A78F84A3CAAFAD161821EE163F1" : "FPVDemo-Part2",
     "EA7A75FA7EF8BEF432C72314545ECAB599863B43" : "iOS-FPVDemo",
-    "F242303504B8CDD3CE213C5B3FFB052B596793AF" : ""
+    "F242303504B8CDD3CE213C5B3FFB052B596793AF" : "",
+    "5DFC7ED62DF5E4A8010BD51A2A68B804BD2735E8" : "iOS-FPVDemo-master\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "FPVDemo",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -24,6 +26,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "djigit11-rd.dji.com:SDKDemo\/FPVDemo-Part2.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "34BB3D3039F51A78F84A3CAAFAD161821EE163F1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/BEMonsterz\/DroneVI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5DFC7ED62DF5E4A8010BD51A2A68B804BD2735E8"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:DJI-Mobile-SDK\/FPVDemo-Part2.git",
