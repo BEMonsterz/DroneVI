@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		33DF64F81D63BBEB005BE301 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DF64F71D63BBEB005BE301 /* MapViewController.m */; };
 		33DF64FA1D63BC4A005BE301 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DF64F91D63BC4A005BE301 /* MapKit.framework */; };
+		33DF64FC1D63C5C9005BE301 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DF64FB1D63C5C9005BE301 /* CoreLocation.framework */; };
 		A45FC1221CF6AF760033ED66 /* DJISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45FC1201CF6AF710033ED66 /* DJISDK.framework */; };
 		A45FC1231CF6AF760033ED66 /* DJISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A45FC1201CF6AF710033ED66 /* DJISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A4E596E61CD07BA300D65878 /* VideoPreviewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E596E51CD07B8500D65878 /* VideoPreviewer.framework */; };
@@ -64,6 +65,7 @@
 		33DF64F61D63BBEB005BE301 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		33DF64F71D63BBEB005BE301 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		33DF64F91D63BC4A005BE301 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		33DF64FB1D63C5C9005BE301 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A45FC1201CF6AF710033ED66 /* DJISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DJISDK.framework; path = FPVDemo/Frameworks/DJISDK.framework; sourceTree = "<group>"; };
 		A4E596E01CD07B8500D65878 /* VideoPreviewer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VideoPreviewer.xcodeproj; path = FPVDemo/Frameworks/VideoPreviewer/VideoPreviewer.xcodeproj; sourceTree = "<group>"; };
 		A4F501001B452220003A82BF /* FPVDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPVDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33DF64FC1D63C5C9005BE301 /* CoreLocation.framework in Frameworks */,
 				33DF64FA1D63BC4A005BE301 /* MapKit.framework in Frameworks */,
 				A45FC1221CF6AF760033ED66 /* DJISDK.framework in Frameworks */,
 				A4E596E61CD07BA300D65878 /* VideoPreviewer.framework in Frameworks */,
@@ -155,6 +158,7 @@
 		A4F501291B4522D0003A82BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33DF64FB1D63C5C9005BE301 /* CoreLocation.framework */,
 				33DF64F91D63BC4A005BE301 /* MapKit.framework */,
 				A45FC1201CF6AF710033ED66 /* DJISDK.framework */,
 				A4E596E01CD07B8500D65878 /* VideoPreviewer.xcodeproj */,

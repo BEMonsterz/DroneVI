@@ -3,6 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Map View Controller-->
@@ -20,6 +23,13 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lz0-Eh-7Yf">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtm-g3-0w9">
+                                <rect key="frame" x="6" y="203" width="46" height="46"/>
+                                <state key="normal" image="droneCamera"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="AgE-sn-t1V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -35,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXC-Uh-AxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-353" y="510"/>
+            <point key="canvasLocation" x="-405" y="642"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -54,9 +64,6 @@
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="teR-U4-CGZ">
                                         <rect key="frame" x="359" y="15" width="189" height="29"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="189" id="yzT-xe-PkJ"/>
-                                        </constraints>
                                         <segments>
                                             <segment title="CaptureMode"/>
                                             <segment title="RecordMode"/>
@@ -67,9 +74,6 @@
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQy-a4-Olk">
                                         <rect key="frame" x="257" y="8" width="87" height="41"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="41" id="MNL-Q2-Ogg"/>
-                                        </constraints>
                                         <state key="normal" title="Start Record">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -78,11 +82,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcq-mf-WA4">
-                                        <rect key="frame" x="89" y="8" width="55" height="41"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="55" id="S5d-nm-eY0"/>
-                                            <constraint firstAttribute="height" constant="41" id="eVv-rd-Jre"/>
-                                        </constraints>
+                                        <rect key="frame" x="144" y="8" width="55" height="41"/>
                                         <state key="normal" title="Capture">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -90,26 +90,32 @@
                                             <action selector="captureAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wwL-8c-Ozm"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHh-ov-GGF">
+                                        <rect key="frame" x="52" y="14" width="46" height="30"/>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <segue destination="O8g-yx-AVo" kind="presentation" id="aj3-V8-QqC"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="leading" secondItem="hcq-mf-WA4" secondAttribute="trailing" constant="58" id="4lJ-wH-VY2"/>
+                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="centerX" secondItem="gIt-71-wG3" secondAttribute="centerX" id="9Ks-2J-0oG"/>
+                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="baseline" secondItem="hcq-mf-WA4" secondAttribute="firstBaseline" id="A7P-oD-R2d"/>
                                     <constraint firstItem="teR-U4-CGZ" firstAttribute="leading" secondItem="RQy-a4-Olk" secondAttribute="trailing" constant="35" id="GSm-dh-QsN">
                                         <variation key="widthClass=compact" constant="23"/>
                                     </constraint>
-                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="top" secondItem="gIt-71-wG3" secondAttribute="top" constant="8" id="O4G-JV-z1N"/>
-                                    <constraint firstAttribute="height" constant="57" id="Sa6-dX-R8I"/>
-                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="leading" secondItem="hcq-mf-WA4" secondAttribute="trailing" priority="500" constant="113" id="SaS-QJ-2c5">
-                                        <variation key="widthClass=compact" constant="36"/>
-                                    </constraint>
+                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="top" secondItem="RQy-a4-Olk" secondAttribute="top" id="GnN-Li-mlR"/>
+                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="baseline" secondItem="RQy-a4-Olk" secondAttribute="baseline" id="OSX-jR-JyT"/>
+                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="baseline" secondItem="RQy-a4-Olk" secondAttribute="firstBaseline" id="P5w-xS-zjh"/>
+                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="baseline" secondItem="teR-U4-CGZ" secondAttribute="baseline" id="Tgt-hT-z8S"/>
+                                    <constraint firstItem="teR-U4-CGZ" firstAttribute="top" secondItem="gIt-71-wG3" secondAttribute="top" constant="15" id="Ue7-08-lyW"/>
+                                    <constraint firstItem="teR-U4-CGZ" firstAttribute="leading" secondItem="RQy-a4-Olk" secondAttribute="trailing" constant="15" id="bRZ-K0-eUE"/>
                                     <constraint firstItem="teR-U4-CGZ" firstAttribute="leading" secondItem="RQy-a4-Olk" secondAttribute="trailing" constant="168" id="jBe-EK-wOB"/>
-                                    <constraint firstItem="teR-U4-CGZ" firstAttribute="top" secondItem="gIt-71-wG3" secondAttribute="top" constant="15" id="kUH-Gb-7Io"/>
-                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="leading" secondItem="gIt-71-wG3" secondAttribute="leading" priority="500" constant="89" id="sXz-vh-bmf">
-                                        <variation key="widthClass=compact" constant="37"/>
-                                    </constraint>
-                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="top" secondItem="gIt-71-wG3" secondAttribute="top" constant="8" id="vFs-Bj-T3c"/>
-                                    <constraint firstAttribute="trailing" secondItem="teR-U4-CGZ" secondAttribute="trailing" constant="52" id="wPx-Jm-miB">
-                                        <variation key="widthClass=compact" constant="10"/>
-                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="teR-U4-CGZ" secondAttribute="trailing" constant="52" id="jIa-ix-P49"/>
+                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="top" secondItem="gIt-71-wG3" secondAttribute="topMargin" id="qOS-O8-VMr"/>
+                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="bottom" secondItem="gIt-71-wG3" secondAttribute="bottomMargin" id="yc8-bq-gKI"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -135,7 +141,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKe-gA-45R">
                                 <rect key="frame" x="200" y="28" width="200" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="iV8-iF-Xpc"/>
+                                    <constraint firstAttribute="width" constant="200" id="1zZ-sT-uhT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -144,16 +150,15 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KMm-p3-aSU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="15J-Yo-TNC"/>
-                            <constraint firstItem="TKe-gA-45R" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="4Ag-7O-RyZ"/>
-                            <constraint firstAttribute="trailing" secondItem="KMm-p3-aSU" secondAttribute="trailing" id="7XI-HW-lGM"/>
-                            <constraint firstAttribute="trailing" secondItem="gIt-71-wG3" secondAttribute="trailing" id="8RH-NQ-Nn1"/>
-                            <constraint firstItem="TKe-gA-45R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="200" id="HdM-OH-x8a"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gIt-71-wG3" secondAttribute="bottom" id="OWB-oI-C9w"/>
-                            <constraint firstItem="gIt-71-wG3" firstAttribute="top" secondItem="KMm-p3-aSU" secondAttribute="bottom" constant="-2" id="RbB-gD-crL"/>
-                            <constraint firstItem="KMm-p3-aSU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="V57-jf-JYP"/>
-                            <constraint firstItem="gIt-71-wG3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qKk-Bs-J9L"/>
-                            <constraint firstAttribute="trailing" secondItem="TKe-gA-45R" secondAttribute="trailing" constant="200" id="yYc-UP-aa0"/>
+                            <constraint firstItem="gIt-71-wG3" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="7Sx-sq-zTA"/>
+                            <constraint firstItem="TKe-gA-45R" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Me8-rS-uTA"/>
+                            <constraint firstItem="KMm-p3-aSU" firstAttribute="centerX" secondItem="TKe-gA-45R" secondAttribute="centerX" id="Vwn-xi-Wge"/>
+                            <constraint firstItem="KMm-p3-aSU" firstAttribute="trailing" secondItem="gIt-71-wG3" secondAttribute="trailing" id="cFx-Wq-Nto"/>
+                            <constraint firstItem="KMm-p3-aSU" firstAttribute="leading" secondItem="gIt-71-wG3" secondAttribute="leading" id="gJT-FI-Ivh"/>
+                            <constraint firstItem="KMm-p3-aSU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jO2-bE-gh6"/>
+                            <constraint firstAttribute="trailing" secondItem="KMm-p3-aSU" secondAttribute="trailing" id="txD-gE-PIy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KMm-p3-aSU" secondAttribute="bottom" constant="55" id="v34-FF-g9y"/>
+                            <constraint firstItem="KMm-p3-aSU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zO1-nY-HMx"/>
                         </constraints>
                     </view>
                     <connections>
@@ -168,4 +173,7 @@
             <point key="canvasLocation" x="343" y="510"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="droneCamera" width="294" height="294"/>
+    </resources>
 </document>
