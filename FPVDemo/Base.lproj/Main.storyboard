@@ -47,6 +47,38 @@
             </objects>
             <point key="canvasLocation" x="-405" y="642"/>
         </scene>
+        <!--Maps View Controller-->
+        <scene sceneID="4tc-Hi-7YW">
+            <objects>
+                <viewController id="YjT-Cn-AjO" customClass="MapsViewController" customModule="FPVDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x1Z-n0-TYw"/>
+                        <viewControllerLayoutGuide type="bottom" id="tvJ-8Z-Ahl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5VE-V8-sIn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zBQ-MS-VjA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zBQ-MS-VjA" firstAttribute="bottom" secondItem="tvJ-8Z-Ahl" secondAttribute="top" id="Ns4-lf-VPb"/>
+                            <constraint firstItem="zBQ-MS-VjA" firstAttribute="leading" secondItem="5VE-V8-sIn" secondAttribute="leading" id="QEw-w1-3gG"/>
+                            <constraint firstItem="zBQ-MS-VjA" firstAttribute="top" secondItem="5VE-V8-sIn" secondAttribute="top" id="Y3i-TA-kXM"/>
+                            <constraint firstAttribute="trailing" secondItem="zBQ-MS-VjA" secondAttribute="trailing" id="vpF-as-mLC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapViews" destination="zBQ-MS-VjA" id="iW2-Uj-O8e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uNB-1d-jle" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-405" y="1319"/>
+        </scene>
         <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>

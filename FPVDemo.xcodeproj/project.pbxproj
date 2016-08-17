@@ -10,6 +10,8 @@
 		33DF64F81D63BBEB005BE301 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DF64F71D63BBEB005BE301 /* MapViewController.m */; };
 		33DF64FA1D63BC4A005BE301 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DF64F91D63BC4A005BE301 /* MapKit.framework */; };
 		33DF64FC1D63C5C9005BE301 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DF64FB1D63C5C9005BE301 /* CoreLocation.framework */; };
+		33DF65021D64D4A2005BE301 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DF65011D64D4A2005BE301 /* CloudKit.framework */; };
+		33DF65041D64D6A8005BE301 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DF65031D64D6A8005BE301 /* MapsViewController.swift */; };
 		A45FC1221CF6AF760033ED66 /* DJISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45FC1201CF6AF710033ED66 /* DJISDK.framework */; };
 		A45FC1231CF6AF760033ED66 /* DJISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A45FC1201CF6AF710033ED66 /* DJISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A4E596E61CD07BA300D65878 /* VideoPreviewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E596E51CD07B8500D65878 /* VideoPreviewer.framework */; };
@@ -66,6 +68,10 @@
 		33DF64F71D63BBEB005BE301 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		33DF64F91D63BC4A005BE301 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		33DF64FB1D63C5C9005BE301 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		33DF64FD1D64D3FD005BE301 /* FPVDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FPVDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		33DF65001D64D48E005BE301 /* FPVDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FPVDemo.entitlements; sourceTree = "<group>"; };
+		33DF65011D64D4A2005BE301 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		33DF65031D64D6A8005BE301 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		A45FC1201CF6AF710033ED66 /* DJISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DJISDK.framework; path = FPVDemo/Frameworks/DJISDK.framework; sourceTree = "<group>"; };
 		A4E596E01CD07B8500D65878 /* VideoPreviewer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VideoPreviewer.xcodeproj; path = FPVDemo/Frameworks/VideoPreviewer/VideoPreviewer.xcodeproj; sourceTree = "<group>"; };
 		A4F501001B452220003A82BF /* FPVDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPVDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33DF65021D64D4A2005BE301 /* CloudKit.framework in Frameworks */,
 				33DF64FC1D63C5C9005BE301 /* CoreLocation.framework in Frameworks */,
 				33DF64FA1D63BC4A005BE301 /* MapKit.framework in Frameworks */,
 				A45FC1221CF6AF760033ED66 /* DJISDK.framework in Frameworks */,
@@ -114,11 +121,13 @@
 		A4F500F71B452220003A82BF = {
 			isa = PBXGroup;
 			children = (
+				33DF65031D64D6A8005BE301 /* MapsViewController.swift */,
 				33DF64F61D63BBEB005BE301 /* MapViewController.h */,
 				33DF64F71D63BBEB005BE301 /* MapViewController.m */,
 				A4F501021B452220003A82BF /* FPVDemo */,
 				A4F501291B4522D0003A82BF /* Frameworks */,
 				A4F501011B452220003A82BF /* Products */,
+				33DF64FD1D64D3FD005BE301 /* FPVDemo-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +143,7 @@
 		A4F501021B452220003A82BF /* FPVDemo */ = {
 			isa = PBXGroup;
 			children = (
+				33DF65001D64D48E005BE301 /* FPVDemo.entitlements */,
 				A4F501071B452220003A82BF /* AppDelegate.h */,
 				A4F501081B452220003A82BF /* AppDelegate.m */,
 				A4F5019B1B454E54003A82BF /* DJICameraViewController.h */,
@@ -158,6 +168,7 @@
 		A4F501291B4522D0003A82BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33DF65011D64D4A2005BE301 /* CloudKit.framework */,
 				33DF64FB1D63C5C9005BE301 /* CoreLocation.framework */,
 				33DF64F91D63BC4A005BE301 /* MapKit.framework */,
 				A45FC1201CF6AF710033ED66 /* DJISDK.framework */,
@@ -212,12 +223,18 @@
 		A4F500F81B452220003A82BF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = DJI;
 				TargetAttributes = {
 					A4F500FF1B452220003A82BF = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = K6D7U78644;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					A4F501181B452220003A82BF = {
 						CreatedOnToolsVersion = 6.3;
@@ -288,6 +305,7 @@
 				A4F501091B452220003A82BF /* AppDelegate.m in Sources */,
 				A4F501061B452220003A82BF /* main.m in Sources */,
 				A4F5019D1B454E54003A82BF /* DJICameraViewController.m in Sources */,
+				33DF65041D64D6A8005BE301 /* MapsViewController.swift in Sources */,
 				33DF64F81D63BBEB005BE301 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +438,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FPVDemo/FPVDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -436,8 +456,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dji.FPVDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bemonsterz.dronezvi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FPVDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -445,6 +467,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FPVDemo/FPVDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -461,8 +485,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dji.FPVDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bemonsterz.dronezvi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FPVDemo-Bridging-Header.h";
 			};
 			name = Release;
 		};
