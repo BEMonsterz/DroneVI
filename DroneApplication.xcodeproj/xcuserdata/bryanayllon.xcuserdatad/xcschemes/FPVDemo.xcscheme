@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A4F500FF1B452220003A82BF"
-               BuildableName = "FPVDemo.app"
-               BlueprintName = "FPVDemo"
-               ReferencedContainer = "container:FPVDemo.xcodeproj">
+               BuildableName = "DroneApplication.app"
+               BlueprintName = "DroneApplication"
+               ReferencedContainer = "container:DroneApplication.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A4F501181B452220003A82BF"
-               BuildableName = "FPVDemoTests.xctest"
-               BlueprintName = "FPVDemoTests"
-               ReferencedContainer = "container:FPVDemo.xcodeproj">
+               BuildableName = "DroneApplication.xctest"
+               BlueprintName = "DroneApplicationTests"
+               ReferencedContainer = "container:DroneApplication.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A4F500FF1B452220003A82BF"
-            BuildableName = "FPVDemo.app"
-            BlueprintName = "FPVDemo"
-            ReferencedContainer = "container:FPVDemo.xcodeproj">
+            BuildableName = "DroneApplication.app"
+            BlueprintName = "DroneApplication"
+            ReferencedContainer = "container:DroneApplication.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A4F500FF1B452220003A82BF"
-            BuildableName = "FPVDemo.app"
-            BlueprintName = "FPVDemo"
-            ReferencedContainer = "container:FPVDemo.xcodeproj">
+            BuildableName = "DroneApplication.app"
+            BlueprintName = "DroneApplication"
+            ReferencedContainer = "container:DroneApplication.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A4F500FF1B452220003A82BF"
-            BuildableName = "FPVDemo.app"
-            BlueprintName = "FPVDemo"
-            ReferencedContainer = "container:FPVDemo.xcodeproj">
+            BuildableName = "DroneApplication.app"
+            BlueprintName = "DroneApplication"
+            ReferencedContainer = "container:DroneApplication.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

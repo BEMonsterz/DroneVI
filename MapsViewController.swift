@@ -44,12 +44,12 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDe
     
     private func populateFloodLocations() {
         
-        let query = CKQuery(recordType: "HighWaters", predicate: NSPredicate(format: "name = %@", "location"))
+        let query = CKQuery(recordType: "DroneStuff", predicate: NSPredicate(format: "name = %@", "location"))
         
         self.publicDB.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) in
             
             for location in records!{
-                let locations = location["WarningLocation"] as! CLLocation
+                let locations = location["DroneLocations"] as! CLLocation
                 let annotationCoordinate = locations.coordinate
                 
                 let highWatersLocationsAnnotation = MKPointAnnotation()
@@ -68,19 +68,22 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDe
     
     
     
-    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+      @IBAction func pinPointPressed () {
         let highWatersAnnotation = MKPointAnnotation()
         highWatersAnnotation.title = "Warning!"
         highWatersAnnotation.coordinate = self.mapViews.userLocation.coordinate
         
         let savedAnnotation = CLLocation(coordinate: highWatersAnnotation.coordinate, altitude:0, horizontalAccuracy: kCLLocationAccuracyBest, verticalAccuracy: kCLLocationAccuracyBest, timestamp: NSDate())
         
-        let pinPointedRecord = CKRecord(recordType: "HighWaters")
-        pinPointedRecord["WarningLocation"] = savedAnnotation
+        let pinPointedRecord = CKRecord(recordType: "DroneStuff")
+        pinPointedRecord["DroneLocations"] = savedAnnotation
         pinPointedRecord["name"] = "location"
         self.publicDB.saveRecord(pinPointedRecord) { (record: CKRecord?, error: NSError?) in }
         self.mapViews.addAnnotation(highWatersAnnotation)
     }
+    
+    
+    
     
     func mapView(mapView: MKMapView, didAddAnnotationViews views: [MKAnnotationView]) {
         if let annotationView = views.first {
@@ -108,7 +111,7 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDe
         }
         
         
-        let hazardousPhoto = UIImage(named: "warning.png")
+        let hazardousPhoto = UIImage(named: "dronepoint.png")
         
         var highWatersAnnotation = self.mapViews.dequeueReusableAnnotationViewWithIdentifier("highWatersAnnotation")
         
@@ -127,7 +130,7 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDe
         
         hazardView.frame.size = CGSize(width: 250, height:  250)
         highWatersAnnotation?.image = hazardousPhoto
-        highWatersAnnotation?.frame = CGRectMake(0, 0, 50, 50)
+        highWatersAnnotation?.frame = CGRectMake(0, 0, 25, 50)
         
         
         highWatersAnnotation?.userInteractionEnabled = true
@@ -149,7 +152,7 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDe
     
     func destoryAnnotation() {
         
-        let query = CKQuery(recordType: "HighWaters", predicate: NSPredicate(format: "name = %@", "location"))
+        let query = CKQuery(recordType: "DroneStuff", predicate: NSPredicate(format: "name = %@", "location"))
         
         self.publicDB.performQuery(query, inZoneWithID: nil) { (records: [CKRecord]?, error: NSError?) in
             
@@ -157,7 +160,7 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDe
                 
                 for loactionRecord in locations {
                     
-                    let recordCoordinate = loactionRecord["WarningLocation"] as! CLLocation
+                    let recordCoordinate = loactionRecord["DroneLocations"] as! CLLocation
                     let savedLongtitudeCoordinate = recordCoordinate.coordinate.longitude
                     let longitudeSavedAnnotation = self.highWatersAnnotation.coordinate.longitude
                     let savedLatitudeCoordinate = recordCoordinate.coordinate.latitude

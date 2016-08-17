@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FPVDemo.xcodeproj">
+      location = "self:/Users/bryanayllon/Downloads/iOS-FPVDemo-master/DroneApplication.xcodeproj">
    </FileRef>
 </Workspace>

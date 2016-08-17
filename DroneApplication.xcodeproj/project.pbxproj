@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33DF64F81D63BBEB005BE301 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DF64F71D63BBEB005BE301 /* MapViewController.m */; };
 		33DF64FA1D63BC4A005BE301 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DF64F91D63BC4A005BE301 /* MapKit.framework */; };
 		33DF64FC1D63C5C9005BE301 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DF64FB1D63C5C9005BE301 /* CoreLocation.framework */; };
 		33DF65021D64D4A2005BE301 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DF65011D64D4A2005BE301 /* CloudKit.framework */; };
@@ -64,8 +63,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		33DF64F61D63BBEB005BE301 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		33DF64F71D63BBEB005BE301 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		33DF64F91D63BC4A005BE301 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		33DF64FB1D63C5C9005BE301 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		33DF64FD1D64D3FD005BE301 /* FPVDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FPVDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -74,7 +71,7 @@
 		33DF65031D64D6A8005BE301 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		A45FC1201CF6AF710033ED66 /* DJISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DJISDK.framework; path = FPVDemo/Frameworks/DJISDK.framework; sourceTree = "<group>"; };
 		A4E596E01CD07B8500D65878 /* VideoPreviewer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VideoPreviewer.xcodeproj; path = FPVDemo/Frameworks/VideoPreviewer/VideoPreviewer.xcodeproj; sourceTree = "<group>"; };
-		A4F501001B452220003A82BF /* FPVDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPVDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4F501001B452220003A82BF /* DroneApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DroneApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F501041B452220003A82BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4F501051B452220003A82BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A4F501071B452220003A82BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,7 +79,7 @@
 		A4F5010E1B452220003A82BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4F501101B452220003A82BF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A4F501131B452220003A82BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A4F501191B452220003A82BF /* FPVDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FPVDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4F501191B452220003A82BF /* DroneApplication.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DroneApplication.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F5019B1B454E54003A82BF /* DJICameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJICameraViewController.h; sourceTree = "<group>"; };
 		A4F5019C1B454E54003A82BF /* DJICameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJICameraViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,8 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				33DF65031D64D6A8005BE301 /* MapsViewController.swift */,
-				33DF64F61D63BBEB005BE301 /* MapViewController.h */,
-				33DF64F71D63BBEB005BE301 /* MapViewController.m */,
 				A4F501021B452220003A82BF /* FPVDemo */,
 				A4F501291B4522D0003A82BF /* Frameworks */,
 				A4F501011B452220003A82BF /* Products */,
@@ -134,8 +129,8 @@
 		A4F501011B452220003A82BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A4F501001B452220003A82BF /* FPVDemo.app */,
-				A4F501191B452220003A82BF /* FPVDemoTests.xctest */,
+				A4F501001B452220003A82BF /* DroneApplication.app */,
+				A4F501191B452220003A82BF /* DroneApplication.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,9 +175,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A4F500FF1B452220003A82BF /* FPVDemo */ = {
+		A4F500FF1B452220003A82BF /* DroneApplication */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A4F501231B452220003A82BF /* Build configuration list for PBXNativeTarget "FPVDemo" */;
+			buildConfigurationList = A4F501231B452220003A82BF /* Build configuration list for PBXNativeTarget "DroneApplication" */;
 			buildPhases = (
 				A4F500FC1B452220003A82BF /* Sources */,
 				A4F500FD1B452220003A82BF /* Frameworks */,
@@ -194,14 +189,14 @@
 			dependencies = (
 				A4E596E91CD07BA300D65878 /* PBXTargetDependency */,
 			);
-			name = FPVDemo;
+			name = DroneApplication;
 			productName = FPVDemo;
-			productReference = A4F501001B452220003A82BF /* FPVDemo.app */;
+			productReference = A4F501001B452220003A82BF /* DroneApplication.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A4F501181B452220003A82BF /* FPVDemoTests */ = {
+		A4F501181B452220003A82BF /* DroneApplicationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A4F501261B452220003A82BF /* Build configuration list for PBXNativeTarget "FPVDemoTests" */;
+			buildConfigurationList = A4F501261B452220003A82BF /* Build configuration list for PBXNativeTarget "DroneApplicationTests" */;
 			buildPhases = (
 				A4F501151B452220003A82BF /* Sources */,
 				A4F501161B452220003A82BF /* Frameworks */,
@@ -212,9 +207,9 @@
 			dependencies = (
 				A4F5011B1B452220003A82BF /* PBXTargetDependency */,
 			);
-			name = FPVDemoTests;
+			name = DroneApplicationTests;
 			productName = FPVDemoTests;
-			productReference = A4F501191B452220003A82BF /* FPVDemoTests.xctest */;
+			productReference = A4F501191B452220003A82BF /* DroneApplication.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -242,7 +237,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A4F500FB1B452220003A82BF /* Build configuration list for PBXProject "FPVDemo" */;
+			buildConfigurationList = A4F500FB1B452220003A82BF /* Build configuration list for PBXProject "DroneApplication" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -261,8 +256,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				A4F500FF1B452220003A82BF /* FPVDemo */,
-				A4F501181B452220003A82BF /* FPVDemoTests */,
+				A4F500FF1B452220003A82BF /* DroneApplication */,
+				A4F501181B452220003A82BF /* DroneApplicationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -306,7 +301,6 @@
 				A4F501061B452220003A82BF /* main.m in Sources */,
 				A4F5019D1B454E54003A82BF /* DJICameraViewController.m in Sources */,
 				33DF65041D64D6A8005BE301 /* MapsViewController.swift in Sources */,
-				33DF64F81D63BBEB005BE301 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +321,7 @@
 		};
 		A4F5011B1B452220003A82BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A4F500FF1B452220003A82BF /* FPVDemo */;
+			target = A4F500FF1B452220003A82BF /* DroneApplication */;
 			targetProxy = A4F5011A1B452220003A82BF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -457,7 +451,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bemonsterz.dronezvi;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DroneApplication;
 				SWIFT_OBJC_BRIDGING_HEADER = "FPVDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -486,7 +480,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bemonsterz.dronezvi;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DroneApplication;
 				SWIFT_OBJC_BRIDGING_HEADER = "FPVDemo-Bridging-Header.h";
 			};
 			name = Release;
@@ -505,8 +499,8 @@
 				);
 				INFOPLIST_FILE = FPVDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FPVDemo.app/FPVDemo";
+				PRODUCT_NAME = DroneApplication;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DroneApplication.app/DroneApplication";
 			};
 			name = Debug;
 		};
@@ -520,15 +514,15 @@
 				);
 				INFOPLIST_FILE = FPVDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FPVDemo.app/FPVDemo";
+				PRODUCT_NAME = DroneApplication;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DroneApplication.app/DroneApplication";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A4F500FB1B452220003A82BF /* Build configuration list for PBXProject "FPVDemo" */ = {
+		A4F500FB1B452220003A82BF /* Build configuration list for PBXProject "DroneApplication" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A4F501211B452220003A82BF /* Debug */,
@@ -537,7 +531,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A4F501231B452220003A82BF /* Build configuration list for PBXNativeTarget "FPVDemo" */ = {
+		A4F501231B452220003A82BF /* Build configuration list for PBXNativeTarget "DroneApplication" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A4F501241B452220003A82BF /* Debug */,
@@ -546,7 +540,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A4F501261B452220003A82BF /* Build configuration list for PBXNativeTarget "FPVDemoTests" */ = {
+		A4F501261B452220003A82BF /* Build configuration list for PBXNativeTarget "DroneApplicationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A4F501271B452220003A82BF /* Debug */,

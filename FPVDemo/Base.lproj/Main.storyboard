@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="O8g-yx-AVo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YjT-Cn-AjO">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,49 +8,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller-->
-        <scene sceneID="XHo-I3-P9g">
-            <objects>
-                <viewController id="O8g-yx-AVo" customClass="MapViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5P1-4J-1oh"/>
-                        <viewControllerLayoutGuide type="bottom" id="Z92-bo-Pxb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4hF-am-nGz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lz0-Eh-7Yf">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtm-g3-0w9">
-                                <rect key="frame" x="6" y="188" width="46" height="46"/>
-                                <state key="normal" image="droneCamera"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="AgE-sn-t1V"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Lz0-Eh-7Yf" firstAttribute="leading" secondItem="4hF-am-nGz" secondAttribute="leading" id="C8D-UO-ps3"/>
-                            <constraint firstItem="Lz0-Eh-7Yf" firstAttribute="top" secondItem="4hF-am-nGz" secondAttribute="top" id="RhU-An-6pm"/>
-                            <constraint firstItem="Lz0-Eh-7Yf" firstAttribute="bottom" secondItem="Z92-bo-Pxb" secondAttribute="top" id="d6Z-Dt-ZxT"/>
-                            <constraint firstAttribute="trailing" secondItem="Lz0-Eh-7Yf" secondAttribute="trailing" id="hfn-gE-eEb"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="mapView" destination="Lz0-Eh-7Yf" id="R8w-b8-08Y"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jXC-Uh-AxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-405" y="642"/>
-        </scene>
         <!--Maps View Controller-->
         <scene sceneID="4tc-Hi-7YW">
             <objects>
-                <viewController id="YjT-Cn-AjO" customClass="MapsViewController" customModule="FPVDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YjT-Cn-AjO" customClass="MapsViewController" customModule="DroneApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="x1Z-n0-TYw"/>
                         <viewControllerLayoutGuide type="bottom" id="tvJ-8Z-Ahl"/>
@@ -62,6 +23,20 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zBQ-MS-VjA">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tsg-65-Deu">
+                                <rect key="frame" x="6" y="188" width="46" height="46"/>
+                                <state key="normal" image="droneCamera"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="e7O-gT-gYL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GT-ig-sQp">
+                                <rect key="frame" x="6" y="115" width="46" height="46"/>
+                                <state key="normal" image="droneButton"/>
+                                <connections>
+                                    <action selector="pinPointPressed" destination="YjT-Cn-AjO" eventType="touchUpInside" id="h4H-qw-nQa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -126,7 +101,7 @@
                                         <rect key="frame" x="52" y="14" width="46" height="30"/>
                                         <state key="normal" title="Back"/>
                                         <connections>
-                                            <segue destination="O8g-yx-AVo" kind="presentation" id="aj3-V8-QqC"/>
+                                            <segue destination="YjT-Cn-AjO" kind="presentation" id="bi1-YD-jvq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -202,10 +177,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="343" y="510"/>
+            <point key="canvasLocation" x="-1123" y="1325"/>
         </scene>
     </scenes>
     <resources>
+        <image name="droneButton" width="196" height="196"/>
         <image name="droneCamera" width="294" height="294"/>
     </resources>
 </document>
