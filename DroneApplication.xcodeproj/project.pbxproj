@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33040B751D66269200C94834 /* DJIRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33040B741D66269200C94834 /* DJIRootViewController.m */; };
+		33040B781D6626CA00C94834 /* DJIPlaybackMultiSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33040B771D6626CA00C94834 /* DJIPlaybackMultiSelectViewController.m */; };
+		33040B7A1D66536000C94834 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33040B791D66536000C94834 /* HomeViewController.swift */; };
 		33DF64FA1D63BC4A005BE301 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DF64F91D63BC4A005BE301 /* MapKit.framework */; };
 		33DF64FC1D63C5C9005BE301 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DF64FB1D63C5C9005BE301 /* CoreLocation.framework */; };
 		33DF65021D64D4A2005BE301 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DF65011D64D4A2005BE301 /* CloudKit.framework */; };
@@ -63,6 +66,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		33040B731D66269200C94834 /* DJIRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJIRootViewController.h; sourceTree = "<group>"; };
+		33040B741D66269200C94834 /* DJIRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJIRootViewController.m; sourceTree = "<group>"; };
+		33040B761D6626CA00C94834 /* DJIPlaybackMultiSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJIPlaybackMultiSelectViewController.h; sourceTree = "<group>"; };
+		33040B771D6626CA00C94834 /* DJIPlaybackMultiSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJIPlaybackMultiSelectViewController.m; sourceTree = "<group>"; };
+		33040B791D66536000C94834 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		33DF64F91D63BC4A005BE301 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		33DF64FB1D63C5C9005BE301 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		33DF64FD1D64D3FD005BE301 /* FPVDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FPVDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -118,6 +126,11 @@
 		A4F500F71B452220003A82BF = {
 			isa = PBXGroup;
 			children = (
+				33040B791D66536000C94834 /* HomeViewController.swift */,
+				33040B761D6626CA00C94834 /* DJIPlaybackMultiSelectViewController.h */,
+				33040B771D6626CA00C94834 /* DJIPlaybackMultiSelectViewController.m */,
+				33040B731D66269200C94834 /* DJIRootViewController.h */,
+				33040B741D66269200C94834 /* DJIRootViewController.m */,
 				33DF65031D64D6A8005BE301 /* MapsViewController.swift */,
 				A4F501021B452220003A82BF /* FPVDemo */,
 				A4F501291B4522D0003A82BF /* Frameworks */,
@@ -298,9 +311,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4F501091B452220003A82BF /* AppDelegate.m in Sources */,
+				33040B781D6626CA00C94834 /* DJIPlaybackMultiSelectViewController.m in Sources */,
 				A4F501061B452220003A82BF /* main.m in Sources */,
 				A4F5019D1B454E54003A82BF /* DJICameraViewController.m in Sources */,
 				33DF65041D64D6A8005BE301 /* MapsViewController.swift in Sources */,
+				33040B7A1D66536000C94834 /* HomeViewController.swift in Sources */,
+				33040B751D66269200C94834 /* DJIRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
