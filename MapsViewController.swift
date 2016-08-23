@@ -111,41 +111,41 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDe
         }
         
         
-        let hazardousPhoto = UIImage(named: "dronepoint.png")
+        let dronePhoto = UIImage(named: "dronepoint.png")
         
-        var highWatersAnnotation = self.mapViews.dequeueReusableAnnotationViewWithIdentifier("highWatersAnnotation")
+        var droneLocationsAnnotation = self.mapViews.dequeueReusableAnnotationViewWithIdentifier("droneLocationsAnnotation")
         
         
-        if highWatersAnnotation == nil {
-            highWatersAnnotation = MKAnnotationView(annotation: annotation, reuseIdentifier: "highWatersAnnotation")
+        if droneLocationsAnnotation == nil {
+            droneLocationsAnnotation = MKAnnotationView(annotation: annotation, reuseIdentifier: "droneLocationsAnnotation")
             
         } else {
-            highWatersAnnotation?.annotation = annotation
+            droneLocationsAnnotation?.annotation = annotation
             
         }
         
-        highWatersAnnotation?.frame = CGRectMake(0, 0, 50, 50)
+        droneLocationsAnnotation?.frame = CGRectMake(0, 0, 50, 50)
         
-        let hazardView = UIImageView(image: hazardousPhoto)
+        let droneView = UIImageView(image: dronePhoto)
         
-        hazardView.frame.size = CGSize(width: 250, height:  250)
-        highWatersAnnotation?.image = hazardousPhoto
-        highWatersAnnotation?.frame = CGRectMake(0, 0, 25, 50)
+        droneView.frame.size = CGSize(width: 250, height:  250)
+        droneLocationsAnnotation?.image = dronePhoto
+        droneLocationsAnnotation?.frame = CGRectMake(0, 0, 25, 50)
         
         
-        highWatersAnnotation?.userInteractionEnabled = true
+        droneLocationsAnnotation?.userInteractionEnabled = true
         
-        highWatersAnnotation!.canShowCallout = true
+        droneLocationsAnnotation!.canShowCallout = true
         
         let leftView = UIView(frame: CGRectMake(0,0,60,80))
         let delete = UIButton(frame: CGRectMake(0,-15.5,60,80))
         delete.titleLabel?.textColor = UIColor.blackColor()
-        delete.setTitle("Delete", forState: UIControlState.Normal)
+        delete.setTitle("Delete?", forState: UIControlState.Normal)
         delete.addTarget(self, action: #selector(destoryAnnotation), forControlEvents:UIControlEvents.TouchUpInside)
         leftView.backgroundColor = UIColor(red: 202.0/255, green: 15.0/255, blue: 20.0/255, alpha: 1.0)
         leftView.addSubview(delete)
-        highWatersAnnotation!.leftCalloutAccessoryView = leftView
-        return highWatersAnnotation
+        droneLocationsAnnotation!.leftCalloutAccessoryView = leftView
+        return droneLocationsAnnotation
         
     }
     

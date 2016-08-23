@@ -45,7 +45,11 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Location Map" id="Qr3-Nf-PPs"/>
+                                    <navigationItem title="Location Map" id="Qr3-Nf-PPs">
+                                        <barButtonItem key="leftBarButtonItem" title="TestButton" id="91o-4J-jYQ">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
