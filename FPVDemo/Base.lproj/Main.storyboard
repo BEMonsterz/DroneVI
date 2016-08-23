@@ -35,22 +35,39 @@
                                     <action selector="pinPointPressed" destination="YjT-Cn-AjO" eventType="touchUpInside" id="h4H-qw-nQa"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxU-Fl-jgU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cYL-ET-eMj"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.34346883639999998" green="0.48532433069999997" blue="0.84457131409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Location Map" id="Qr3-Nf-PPs"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zBQ-MS-VjA" firstAttribute="bottom" secondItem="tvJ-8Z-Ahl" secondAttribute="top" id="Ns4-lf-VPb"/>
-                            <constraint firstItem="zBQ-MS-VjA" firstAttribute="leading" secondItem="5VE-V8-sIn" secondAttribute="leading" id="QEw-w1-3gG"/>
-                            <constraint firstItem="zBQ-MS-VjA" firstAttribute="top" secondItem="5VE-V8-sIn" secondAttribute="top" id="Y3i-TA-kXM"/>
-                            <constraint firstAttribute="trailing" secondItem="zBQ-MS-VjA" secondAttribute="trailing" id="vpF-as-mLC"/>
+                            <constraint firstItem="zBQ-MS-VjA" firstAttribute="top" secondItem="5VE-V8-sIn" secondAttribute="top" id="JE5-Fn-CEg"/>
+                            <constraint firstItem="xxU-Fl-jgU" firstAttribute="trailing" secondItem="zBQ-MS-VjA" secondAttribute="trailing" id="YVB-5h-LRz"/>
+                            <constraint firstItem="xxU-Fl-jgU" firstAttribute="leading" secondItem="zBQ-MS-VjA" secondAttribute="leading" id="d5e-ha-c5i"/>
+                            <constraint firstAttribute="trailing" secondItem="zBQ-MS-VjA" secondAttribute="trailing" id="gIj-62-yIm"/>
+                            <constraint firstItem="zBQ-MS-VjA" firstAttribute="bottom" secondItem="tvJ-8Z-Ahl" secondAttribute="top" id="kuf-N1-wBy"/>
+                            <constraint firstItem="zBQ-MS-VjA" firstAttribute="leading" secondItem="5VE-V8-sIn" secondAttribute="leading" id="vtc-qg-ySI"/>
+                            <constraint firstItem="xxU-Fl-jgU" firstAttribute="top" secondItem="zBQ-MS-VjA" secondAttribute="top" id="yOh-G6-T2b"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="gXP-u7-Dfd"/>
                     <connections>
                         <outlet property="mapViews" destination="zBQ-MS-VjA" id="iW2-Uj-O8e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNB-1d-jle" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-583" y="1378"/>
+            <point key="canvasLocation" x="447" y="1216"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="16a-Dl-IEn">
@@ -85,7 +102,7 @@
                                 </constraints>
                                 <state key="normal" image="mapButton"/>
                                 <connections>
-                                    <segue destination="YjT-Cn-AjO" kind="presentation" id="UYe-fj-Fb7"/>
+                                    <segue destination="YjT-Cn-AjO" kind="presentation" id="tEc-Ir-kaW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPh-f1-NdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-583" y="636"/>
+            <point key="canvasLocation" x="145" y="530"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -134,10 +151,9 @@
                                         </connections>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcq-mf-WA4">
-                                        <rect key="frame" x="173" y="11" width="47" height="35"/>
+                                        <rect key="frame" x="173" y="11" width="32" height="31"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="BJC-Jb-H7f"/>
-                                            <constraint firstAttribute="width" constant="47" id="wGf-hX-acG"/>
+                                            <constraint firstAttribute="width" constant="32" id="NXO-4Z-kZk"/>
                                         </constraints>
                                         <state key="normal" image="pictureIcon">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,20 +163,30 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHh-ov-GGF">
-                                        <rect key="frame" x="8" y="11" width="42" height="35"/>
+                                        <rect key="frame" x="24" y="11" width="32" height="31"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="42" id="8ii-ga-D8s"/>
+                                            <constraint firstAttribute="width" constant="32" id="uCu-kc-sSK"/>
                                         </constraints>
                                         <state key="normal" image="backButton"/>
                                         <connections>
                                             <segue destination="og1-b6-t8W" kind="presentation" id="tVL-kA-0tm"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7Q-se-zGY">
+                                        <rect key="frame" x="94" y="13" width="32" height="31"/>
+                                        <state key="normal" image="pinPOINT">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="captureAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gnh-Nc-Bbp"/>
+                                            <segue destination="YjT-Cn-AjO" kind="presentation" id="a3r-KQ-rsA"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQy-a4-Olk">
-                                        <rect key="frame" x="251" y="6" width="45" height="45"/>
+                                        <rect key="frame" x="250" y="11" width="32" height="31"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="45" id="eu4-kx-ylz"/>
-                                            <constraint firstAttribute="height" constant="45" id="sCx-8M-q67"/>
+                                            <constraint firstAttribute="width" constant="32" id="fbe-3Y-tup"/>
+                                            <constraint firstAttribute="height" constant="31" id="jGg-IR-Bhu"/>
                                         </constraints>
                                         <state key="normal" image="videoRecord">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -169,38 +195,29 @@
                                             <action selector="recordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OpH-bb-W22"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7Q-se-zGY">
-                                        <rect key="frame" x="85" y="6" width="47" height="46"/>
-                                        <state key="normal" image="pinPOINT">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="captureAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gnh-Nc-Bbp"/>
-                                            <segue destination="YjT-Cn-AjO" kind="presentation" id="oRg-PD-cmd"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="leading" secondItem="hcq-mf-WA4" secondAttribute="trailing" constant="31" id="0b8-I2-Vq6"/>
-                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="leading" secondItem="X7Q-se-zGY" secondAttribute="trailing" constant="41" id="EeA-ic-9hp"/>
+                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="bottom" secondItem="hcq-mf-WA4" secondAttribute="bottom" id="5BH-dn-R2R"/>
+                                    <constraint firstItem="X7Q-se-zGY" firstAttribute="centerY" secondItem="gIt-71-wG3" secondAttribute="centerY" id="5Hl-HF-VIu"/>
+                                    <constraint firstItem="teR-U4-CGZ" firstAttribute="leading" secondItem="RQy-a4-Olk" secondAttribute="trailing" constant="77" id="8Ng-ib-0p9"/>
+                                    <constraint firstAttribute="bottom" secondItem="PHh-ov-GGF" secondAttribute="bottom" constant="15" id="9pi-XQ-NcD"/>
                                     <constraint firstItem="teR-U4-CGZ" firstAttribute="leading" secondItem="RQy-a4-Olk" secondAttribute="trailing" constant="35" id="GSm-dh-QsN">
                                         <variation key="widthClass=compact" constant="23"/>
                                     </constraint>
-                                    <constraint firstItem="PHh-ov-GGF" firstAttribute="leading" secondItem="gIt-71-wG3" secondAttribute="leadingMargin" id="GmM-8r-p0A"/>
-                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="centerY" secondItem="teR-U4-CGZ" secondAttribute="centerY" id="TG9-j9-68K"/>
-                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="centerY" secondItem="RQy-a4-Olk" secondAttribute="centerY" id="U5D-VT-Mmv"/>
+                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="bottom" secondItem="PHh-ov-GGF" secondAttribute="bottom" id="Jpb-X2-eff"/>
+                                    <constraint firstItem="X7Q-se-zGY" firstAttribute="leading" secondItem="PHh-ov-GGF" secondAttribute="trailing" constant="38" id="KRc-GJ-iCX"/>
+                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="top" secondItem="hcq-mf-WA4" secondAttribute="top" id="Leh-AB-V43"/>
+                                    <constraint firstItem="PHh-ov-GGF" firstAttribute="leading" secondItem="gIt-71-wG3" secondAttribute="leading" constant="24" id="NQI-MS-Tos"/>
+                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="leading" secondItem="hcq-mf-WA4" secondAttribute="trailing" constant="45" id="Rbd-dZ-nze"/>
+                                    <constraint firstItem="PHh-ov-GGF" firstAttribute="top" secondItem="gIt-71-wG3" secondAttribute="top" constant="11" id="UMk-67-US4"/>
                                     <constraint firstItem="teR-U4-CGZ" firstAttribute="top" secondItem="gIt-71-wG3" secondAttribute="top" constant="15" id="Ue7-08-lyW"/>
-                                    <constraint firstItem="X7Q-se-zGY" firstAttribute="centerY" secondItem="PHh-ov-GGF" secondAttribute="centerY" id="WBP-cj-2ND"/>
-                                    <constraint firstItem="X7Q-se-zGY" firstAttribute="top" secondItem="RQy-a4-Olk" secondAttribute="top" id="WLU-VQ-jyQ"/>
-                                    <constraint firstItem="teR-U4-CGZ" firstAttribute="leading" secondItem="RQy-a4-Olk" secondAttribute="trailing" constant="63" id="gai-Qo-zxK"/>
-                                    <constraint firstItem="PHh-ov-GGF" firstAttribute="bottom" secondItem="hcq-mf-WA4" secondAttribute="bottom" id="j9y-6K-JBo"/>
+                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="leading" secondItem="gIt-71-wG3" secondAttribute="leading" constant="250" id="Y63-uP-EDD"/>
+                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="top" secondItem="PHh-ov-GGF" secondAttribute="top" id="d0z-NF-umu"/>
                                     <constraint firstItem="teR-U4-CGZ" firstAttribute="leading" secondItem="RQy-a4-Olk" secondAttribute="trailing" constant="168" id="jBe-EK-wOB"/>
                                     <constraint firstAttribute="trailing" secondItem="teR-U4-CGZ" secondAttribute="trailing" constant="52" id="jIa-ix-P49"/>
-                                    <constraint firstItem="X7Q-se-zGY" firstAttribute="leading" secondItem="PHh-ov-GGF" secondAttribute="trailing" constant="35" id="kCI-Kv-v2a"/>
-                                    <constraint firstItem="PHh-ov-GGF" firstAttribute="top" secondItem="hcq-mf-WA4" secondAttribute="top" id="mF0-vb-XhH"/>
-                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="centerY" secondItem="gIt-71-wG3" secondAttribute="centerY" id="xIb-Tz-rhc"/>
-                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="leading" secondItem="gIt-71-wG3" secondAttribute="leading" constant="251" id="xPI-V1-BTq"/>
+                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="leading" secondItem="X7Q-se-zGY" secondAttribute="trailing" constant="47" id="nPv-U2-FAH"/>
+                                    <constraint firstItem="X7Q-se-zGY" firstAttribute="top" secondItem="gIt-71-wG3" secondAttribute="top" constant="13" id="ygm-P3-Xd6"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -255,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="259" y="777"/>
+            <point key="canvasLocation" x="1071" y="777"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="V5S-wX-5pe">
@@ -281,14 +298,14 @@
         <image name="droneButton" width="196" height="196"/>
         <image name="droneCamera" width="294" height="294"/>
         <image name="droneCamera-1" width="210" height="114"/>
-        <image name="home3" width="375" height="667"/>
+        <image name="home3" width="668" height="371"/>
         <image name="mapButton" width="210" height="114"/>
         <image name="pictureIcon" width="414" height="307"/>
         <image name="pinPOINT" width="128" height="208"/>
         <image name="videoRecord" width="306" height="306"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UYe-fj-Fb7"/>
-        <segue reference="wxL-a3-84a"/>
+        <segue reference="tEc-Ir-kaW"/>
+        <segue reference="e7O-gT-gYL"/>
     </inferredMetricsTieBreakers>
 </document>

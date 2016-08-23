@@ -14,7 +14,7 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDe
     
     @IBOutlet weak var mapViews: MKMapView!
     var locationManager: CLLocationManager!
-    var highWatersAnnotation: MKAnnotation!
+    var droneLocationsAnnotation: MKAnnotation!
     var container: CKContainer!
     var publicDB: CKDatabase!
     
@@ -52,11 +52,11 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDe
                 let locations = location["DroneLocations"] as! CLLocation
                 let annotationCoordinate = locations.coordinate
                 
-                let highWatersLocationsAnnotation = MKPointAnnotation()
-                highWatersLocationsAnnotation.title = "Warning!"
-                highWatersLocationsAnnotation.coordinate = annotationCoordinate
+                let droneLocationsAnnotation = MKPointAnnotation()
+                droneLocationsAnnotation.title = "Warning!"
+                droneLocationsAnnotation.coordinate = annotationCoordinate
                 
-                self.mapViews.addAnnotation(highWatersLocationsAnnotation)
+                self.mapViews.addAnnotation(droneLocationsAnnotation)
                 
             }
             
@@ -69,17 +69,17 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDe
     
     
       @IBAction func pinPointPressed () {
-        let highWatersAnnotation = MKPointAnnotation()
-        highWatersAnnotation.title = "Warning!"
-        highWatersAnnotation.coordinate = self.mapViews.userLocation.coordinate
+        let droneLocationsAnnotation = MKPointAnnotation()
+        droneLocationsAnnotation.title = "Warning!"
+        droneLocationsAnnotation.coordinate = self.mapViews.userLocation.coordinate
         
-        let savedAnnotation = CLLocation(coordinate: highWatersAnnotation.coordinate, altitude:0, horizontalAccuracy: kCLLocationAccuracyBest, verticalAccuracy: kCLLocationAccuracyBest, timestamp: NSDate())
+        let savedAnnotation = CLLocation(coordinate: droneLocationsAnnotation.coordinate, altitude:0, horizontalAccuracy: kCLLocationAccuracyBest, verticalAccuracy: kCLLocationAccuracyBest, timestamp: NSDate())
         
         let pinPointedRecord = CKRecord(recordType: "DroneStuff")
         pinPointedRecord["DroneLocations"] = savedAnnotation
         pinPointedRecord["name"] = "location"
         self.publicDB.saveRecord(pinPointedRecord) { (record: CKRecord?, error: NSError?) in }
-        self.mapViews.addAnnotation(highWatersAnnotation)
+        self.mapViews.addAnnotation(droneLocationsAnnotation)
     }
     
     
@@ -98,7 +98,7 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDe
     
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
         
-        self.highWatersAnnotation = view.annotation
+        self.droneLocationsAnnotation = view.annotation
         
         
     }
@@ -162,9 +162,9 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDe
                     
                     let recordCoordinate = loactionRecord["DroneLocations"] as! CLLocation
                     let savedLongtitudeCoordinate = recordCoordinate.coordinate.longitude
-                    let longitudeSavedAnnotation = self.highWatersAnnotation.coordinate.longitude
+                    let longitudeSavedAnnotation = self.droneLocationsAnnotation.coordinate.longitude
                     let savedLatitudeCoordinate = recordCoordinate.coordinate.latitude
-                    let latitudeSavedAnnotation = self.highWatersAnnotation.coordinate.latitude
+                    let latitudeSavedAnnotation = self.droneLocationsAnnotation.coordinate.latitude
                     
                     if(savedLongtitudeCoordinate == longitudeSavedAnnotation && savedLatitudeCoordinate == latitudeSavedAnnotation ){
                         self.publicDB.deleteRecordWithID(loactionRecord.recordID, completionHandler: { (recordId: CKRecordID?, error: NSError?) in })
@@ -176,7 +176,7 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDe
             
         }
         
-        mapViews.removeAnnotation(self.highWatersAnnotation)
+        mapViews.removeAnnotation(self.droneLocationsAnnotation)
     }
     
     override func didReceiveMemoryWarning() {
