@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -21,20 +22,6 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zBQ-MS-VjA">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tsg-65-Deu">
-                                <rect key="frame" x="6" y="188" width="46" height="46"/>
-                                <state key="normal" image="droneCamera"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="e7O-gT-gYL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GT-ig-sQp">
-                                <rect key="frame" x="6" y="115" width="46" height="46"/>
-                                <state key="normal" image="droneButton"/>
-                                <connections>
-                                    <action selector="pinPointPressed" destination="YjT-Cn-AjO" eventType="touchUpInside" id="h4H-qw-nQa"/>
-                                </connections>
-                            </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxU-Fl-jgU">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <constraints>
@@ -46,8 +33,17 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Location Map" id="Qr3-Nf-PPs">
-                                        <barButtonItem key="leftBarButtonItem" title="TestButton" id="91o-4J-jYQ">
+                                        <barButtonItem key="leftBarButtonItem" image="toolbar" id="91o-4J-jYQ">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="pinPointPressed" destination="YjT-Cn-AjO" id="deK-o3-XhS"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Live Feed" id="tHV-8x-cZ6">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" id="XH8-FP-u3h"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -154,31 +150,32 @@
                                             <action selector="changeWorkModeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="N2T-ML-N7N"/>
                                         </connections>
                                     </segmentedControl>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcq-mf-WA4">
-                                        <rect key="frame" x="173" y="11" width="32" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="NXO-4Z-kZk"/>
-                                        </constraints>
-                                        <state key="normal" image="pictureIcon">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="captureAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wwL-8c-Ozm"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHh-ov-GGF">
-                                        <rect key="frame" x="24" y="11" width="32" height="31"/>
+                                        <rect key="frame" x="24" y="14" width="32" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="32" id="uCu-kc-sSK"/>
                                         </constraints>
-                                        <state key="normal" image="backButton"/>
+                                        <state key="normal" image="openhaus"/>
                                         <connections>
                                             <segue destination="og1-b6-t8W" kind="presentation" id="tVL-kA-0tm"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQy-a4-Olk">
+                                        <rect key="frame" x="250" y="14" width="32" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="fbe-3Y-tup"/>
+                                            <constraint firstAttribute="height" constant="31" id="jGg-IR-Bhu"/>
+                                        </constraints>
+                                        <state key="normal" image="record2">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="recordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OpH-bb-W22"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7Q-se-zGY">
-                                        <rect key="frame" x="94" y="13" width="32" height="31"/>
-                                        <state key="normal" image="pinPOINT">
+                                        <rect key="frame" x="94" y="11" width="28" height="36"/>
+                                        <state key="normal" image="toolbar">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -186,42 +183,49 @@
                                             <segue destination="YjT-Cn-AjO" kind="presentation" id="a3r-KQ-rsA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQy-a4-Olk">
-                                        <rect key="frame" x="250" y="11" width="32" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcq-mf-WA4">
+                                        <rect key="frame" x="170" y="15" width="35" height="31"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="fbe-3Y-tup"/>
-                                            <constraint firstAttribute="height" constant="31" id="jGg-IR-Bhu"/>
+                                            <constraint firstAttribute="width" constant="35" id="NXO-4Z-kZk"/>
                                         </constraints>
-                                        <state key="normal" image="videoRecord">
+                                        <state key="normal" image="photoIcon2">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="recordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OpH-bb-W22"/>
+                                            <action selector="captureAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wwL-8c-Ozm"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="bottom" secondItem="hcq-mf-WA4" secondAttribute="bottom" id="5BH-dn-R2R"/>
-                                    <constraint firstItem="X7Q-se-zGY" firstAttribute="centerY" secondItem="gIt-71-wG3" secondAttribute="centerY" id="5Hl-HF-VIu"/>
+                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="bottom" secondItem="hcq-mf-WA4" secondAttribute="bottom" constant="-1" id="5BH-dn-R2R"/>
+                                    <constraint firstItem="X7Q-se-zGY" firstAttribute="centerY" secondItem="gIt-71-wG3" secondAttribute="centerY" constant="0.5" id="5Hl-HF-VIu"/>
                                     <constraint firstItem="teR-U4-CGZ" firstAttribute="leading" secondItem="RQy-a4-Olk" secondAttribute="trailing" constant="77" id="8Ng-ib-0p9"/>
-                                    <constraint firstAttribute="bottom" secondItem="PHh-ov-GGF" secondAttribute="bottom" constant="15" id="9pi-XQ-NcD"/>
+                                    <constraint firstAttribute="bottom" secondItem="PHh-ov-GGF" secondAttribute="bottom" constant="12" id="9pi-XQ-NcD"/>
+                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="centerY" secondItem="PHh-ov-GGF" secondAttribute="centerY" id="Axp-f8-7lq"/>
                                     <constraint firstItem="teR-U4-CGZ" firstAttribute="leading" secondItem="RQy-a4-Olk" secondAttribute="trailing" constant="35" id="GSm-dh-QsN">
                                         <variation key="widthClass=compact" constant="23"/>
                                     </constraint>
                                     <constraint firstItem="RQy-a4-Olk" firstAttribute="bottom" secondItem="PHh-ov-GGF" secondAttribute="bottom" id="Jpb-X2-eff"/>
                                     <constraint firstItem="X7Q-se-zGY" firstAttribute="leading" secondItem="PHh-ov-GGF" secondAttribute="trailing" constant="38" id="KRc-GJ-iCX"/>
-                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="top" secondItem="hcq-mf-WA4" secondAttribute="top" id="Leh-AB-V43"/>
+                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="top" secondItem="hcq-mf-WA4" secondAttribute="top" constant="-1" id="Leh-AB-V43"/>
+                                    <constraint firstItem="X7Q-se-zGY" firstAttribute="firstBaseline" secondItem="RQy-a4-Olk" secondAttribute="firstBaseline" id="NOn-d1-wlR"/>
                                     <constraint firstItem="PHh-ov-GGF" firstAttribute="leading" secondItem="gIt-71-wG3" secondAttribute="leading" constant="24" id="NQI-MS-Tos"/>
+                                    <constraint firstItem="RQy-a4-Olk" firstAttribute="centerX" secondItem="PHh-ov-GGF" secondAttribute="centerX" constant="226" id="P9o-G7-9tu"/>
                                     <constraint firstItem="RQy-a4-Olk" firstAttribute="leading" secondItem="hcq-mf-WA4" secondAttribute="trailing" constant="45" id="Rbd-dZ-nze"/>
-                                    <constraint firstItem="PHh-ov-GGF" firstAttribute="top" secondItem="gIt-71-wG3" secondAttribute="top" constant="11" id="UMk-67-US4"/>
+                                    <constraint firstItem="PHh-ov-GGF" firstAttribute="top" secondItem="gIt-71-wG3" secondAttribute="top" constant="14" id="UMk-67-US4"/>
                                     <constraint firstItem="teR-U4-CGZ" firstAttribute="top" secondItem="gIt-71-wG3" secondAttribute="top" constant="15" id="Ue7-08-lyW"/>
+                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="centerY" secondItem="PHh-ov-GGF" secondAttribute="centerY" constant="1" id="Vk8-jf-yh0"/>
                                     <constraint firstItem="RQy-a4-Olk" firstAttribute="leading" secondItem="gIt-71-wG3" secondAttribute="leading" constant="250" id="Y63-uP-EDD"/>
-                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="top" secondItem="PHh-ov-GGF" secondAttribute="top" id="d0z-NF-umu"/>
+                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="top" secondItem="PHh-ov-GGF" secondAttribute="top" constant="1" id="d0z-NF-umu"/>
+                                    <constraint firstItem="X7Q-se-zGY" firstAttribute="centerY" secondItem="PHh-ov-GGF" secondAttribute="centerY" id="fm0-Gp-3wN"/>
                                     <constraint firstItem="teR-U4-CGZ" firstAttribute="leading" secondItem="RQy-a4-Olk" secondAttribute="trailing" constant="168" id="jBe-EK-wOB"/>
                                     <constraint firstAttribute="trailing" secondItem="teR-U4-CGZ" secondAttribute="trailing" constant="52" id="jIa-ix-P49"/>
-                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="leading" secondItem="X7Q-se-zGY" secondAttribute="trailing" constant="47" id="nPv-U2-FAH"/>
-                                    <constraint firstItem="X7Q-se-zGY" firstAttribute="top" secondItem="gIt-71-wG3" secondAttribute="top" constant="13" id="ygm-P3-Xd6"/>
+                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="centerX" secondItem="PHh-ov-GGF" secondAttribute="centerX" constant="147.5" id="m2v-3S-LWN"/>
+                                    <constraint firstItem="hcq-mf-WA4" firstAttribute="leading" secondItem="X7Q-se-zGY" secondAttribute="trailing" constant="48" id="nPv-U2-FAH"/>
+                                    <constraint firstItem="X7Q-se-zGY" firstAttribute="baseline" secondItem="RQy-a4-Olk" secondAttribute="baseline" id="wE2-Qy-abB"/>
+                                    <constraint firstItem="X7Q-se-zGY" firstAttribute="centerX" secondItem="PHh-ov-GGF" secondAttribute="centerX" constant="68" id="wfc-nn-WzU"/>
+                                    <constraint firstItem="X7Q-se-zGY" firstAttribute="top" secondItem="gIt-71-wG3" secondAttribute="top" constant="11" id="ygm-P3-Xd6"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -298,18 +302,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backButton" width="262" height="214"/>
-        <image name="droneButton" width="196" height="196"/>
-        <image name="droneCamera" width="294" height="294"/>
         <image name="droneCamera-1" width="210" height="114"/>
         <image name="home3" width="668" height="371"/>
         <image name="mapButton" width="210" height="114"/>
-        <image name="pictureIcon" width="414" height="307"/>
-        <image name="pinPOINT" width="128" height="208"/>
-        <image name="videoRecord" width="306" height="306"/>
+        <image name="openhaus" width="18" height="16"/>
+        <image name="photoIcon2" width="20" height="16"/>
+        <image name="record2" width="20" height="20"/>
+        <image name="toolbar" width="12" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tEc-Ir-kaW"/>
-        <segue reference="e7O-gT-gYL"/>
+        <segue reference="a3r-KQ-rsA"/>
+        <segue reference="XH8-FP-u3h"/>
     </inferredMetricsTieBreakers>
 </document>

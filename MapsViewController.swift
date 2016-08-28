@@ -140,7 +140,7 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDe
         let leftView = UIView(frame: CGRectMake(0,0,60,80))
         let delete = UIButton(frame: CGRectMake(0,-15.5,60,80))
         delete.titleLabel?.textColor = UIColor.blackColor()
-        delete.setTitle("Delete?", forState: UIControlState.Normal)
+        delete.setTitle("Delete", forState: UIControlState.Normal)
         delete.addTarget(self, action: #selector(destoryAnnotation), forControlEvents:UIControlEvents.TouchUpInside)
         leftView.backgroundColor = UIColor(red: 202.0/255, green: 15.0/255, blue: 20.0/255, alpha: 1.0)
         leftView.addSubview(delete)

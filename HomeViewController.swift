@@ -9,7 +9,8 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+//Don't put anything in here just for looks and stuff
+    
     override func viewDidLoad() {
         super.viewDidLoad()
              // Do any additional setup after loading the view.
