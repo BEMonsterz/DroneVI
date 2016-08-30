@@ -196,7 +196,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="RQy-a4-Olk" firstAttribute="bottom" secondItem="hcq-mf-WA4" secondAttribute="bottom" constant="-1" id="5BH-dn-R2R"/>
                                     <constraint firstItem="X7Q-se-zGY" firstAttribute="centerY" secondItem="gIt-71-wG3" secondAttribute="centerY" constant="0.5" id="5Hl-HF-VIu"/>
@@ -311,7 +310,7 @@
         <image name="toolbar" width="12" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="a3r-KQ-rsA"/>
         <segue reference="XH8-FP-u3h"/>
+        <segue reference="a3r-KQ-rsA"/>
     </inferredMetricsTieBreakers>
 </document>
