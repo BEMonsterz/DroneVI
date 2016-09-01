@@ -5,7 +5,7 @@
 //  Created by Bryan Ayllon on 8/18/16.
 //  Copyright © 2016 DJI. All rights reserved.
 //
-
+//do this another time i guess?
 #import "DJIRootViewController.h"
 #import <DJISDK/DJISDK.h>
 #import <VideoPreviewer/VideoPreviewer.h>
@@ -149,7 +149,7 @@
 - (void)showAlertViewWithTitle:(NSString *)title withMessage:(NSString *)message
 {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Cool!" style:UIAlertActionStyleDefault handler:nil];
     [alert addAction:okAction];
     [self presentViewController:alert animated:YES completion:nil];
 }
@@ -171,9 +171,9 @@
 
 - (void)sdkManagerDidRegisterAppWithError:(NSError *)error
 {
-    NSString* message = @"Register App Successed!";
+    NSString* message = @"Your Drone is Activated!";
     if (error) {
-        message = @"Register App Failed! Please enter your App Key and check the network.";
+        message = @"Drone Not Activated! Check the Drone or Drone network.";
         
     }else
     {
@@ -182,7 +182,7 @@
         [[VideoPreviewer instance] start];
     }
     
-    [self showAlertViewWithTitle:@"Register App" withMessage:message];
+    [self showAlertViewWithTitle:@"Drone Activated!" withMessage:message];
 }
 
 - (void)initData

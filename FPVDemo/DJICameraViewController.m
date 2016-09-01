@@ -68,7 +68,7 @@
 - (void)showAlertViewWithTitle:(NSString *)title withMessage:(NSString *)message
 {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Cool!" style:UIAlertActionStyleDefault handler:nil];
     [alert addAction:okAction];
     [self presentViewController:alert animated:YES completion:nil];
 }
@@ -105,9 +105,9 @@
 
 - (void)sdkManagerDidRegisterAppWithError:(NSError *)error
 {
-    NSString* message = @"Register App Successed!";
+    NSString* message = @"Drone Activated!";
     if (error) {
-        message = @"Register App Failed! Please enter your App Key and check the network.";
+        message = @"Drone Not Activated! Check the Drone or Drone network.";
     }else
     {
         NSLog(@"registerAppSuccess");
@@ -116,7 +116,7 @@
         [[VideoPreviewer instance] start];
     }
     
-    [self showAlertViewWithTitle:@"Register App" withMessage:message];
+    [self showAlertViewWithTitle:@"Drone Activated" withMessage:message];
 }
 
 #pragma mark - DJIBaseProductDelegate Method
@@ -216,7 +216,7 @@
             
             [camera setCameraMode:DJICameraModeShootPhoto withCompletion:^(NSError * _Nullable error) {
                 if (error) {
-                    [weakSelf showAlertViewWithTitle:@"Set DJICameraModeShootPhoto Failed" withMessage:error.description];
+                    [weakSelf showAlertViewWithTitle:@"Photo failed" withMessage:error.description];
                 }
                 
             }];
@@ -225,7 +225,7 @@
             
             [camera setCameraMode:DJICameraModeRecordVideo withCompletion:^(NSError * _Nullable error) {
                 if (error) {
-                    [weakSelf showAlertViewWithTitle:@"Set DJICameraModeRecordVideo Failed" withMessage:error.description];
+                    [weakSelf showAlertViewWithTitle:@"Video Failed" withMessage:error.description];
                 }
                 
             }];

@@ -10,6 +10,9 @@
 		33040B751D66269200C94834 /* DJIRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33040B741D66269200C94834 /* DJIRootViewController.m */; };
 		33040B781D6626CA00C94834 /* DJIPlaybackMultiSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33040B771D6626CA00C94834 /* DJIPlaybackMultiSelectViewController.m */; };
 		33040B7A1D66536000C94834 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33040B791D66536000C94834 /* HomeViewController.swift */; };
+		3353F9A91D76510200EDD820 /* DJIPlaybackMultiSelectViewController_iPhone6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3353F9A61D76510200EDD820 /* DJIPlaybackMultiSelectViewController_iPhone6.xib */; };
+		3353F9AA1D76510200EDD820 /* DJIPlaybackMultiSelectViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3353F9A71D76510200EDD820 /* DJIPlaybackMultiSelectViewController_iPad.xib */; };
+		3353F9AB1D76510200EDD820 /* DJIPlaybackMultiSelectViewController_iPhone6+.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3353F9A81D76510200EDD820 /* DJIPlaybackMultiSelectViewController_iPhone6+.xib */; };
 		335EB03C1D6C75220088149C /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335EB03B1D6C75220088149C /* FavoritesTableViewController.swift */; };
 		33DF64FA1D63BC4A005BE301 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DF64F91D63BC4A005BE301 /* MapKit.framework */; };
 		33DF64FC1D63C5C9005BE301 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DF64FB1D63C5C9005BE301 /* CoreLocation.framework */; };
@@ -72,6 +75,9 @@
 		33040B761D6626CA00C94834 /* DJIPlaybackMultiSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJIPlaybackMultiSelectViewController.h; sourceTree = "<group>"; };
 		33040B771D6626CA00C94834 /* DJIPlaybackMultiSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJIPlaybackMultiSelectViewController.m; sourceTree = "<group>"; };
 		33040B791D66536000C94834 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3353F9A61D76510200EDD820 /* DJIPlaybackMultiSelectViewController_iPhone6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJIPlaybackMultiSelectViewController_iPhone6.xib; sourceTree = "<group>"; };
+		3353F9A71D76510200EDD820 /* DJIPlaybackMultiSelectViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJIPlaybackMultiSelectViewController_iPad.xib; sourceTree = "<group>"; };
+		3353F9A81D76510200EDD820 /* DJIPlaybackMultiSelectViewController_iPhone6+.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "DJIPlaybackMultiSelectViewController_iPhone6+.xib"; sourceTree = "<group>"; };
 		335EB03B1D6C75220088149C /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		33DF64F91D63BC4A005BE301 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		33DF64FB1D63C5C9005BE301 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -128,6 +134,9 @@
 		A4F500F71B452220003A82BF = {
 			isa = PBXGroup;
 			children = (
+				3353F9A61D76510200EDD820 /* DJIPlaybackMultiSelectViewController_iPhone6.xib */,
+				3353F9A71D76510200EDD820 /* DJIPlaybackMultiSelectViewController_iPad.xib */,
+				3353F9A81D76510200EDD820 /* DJIPlaybackMultiSelectViewController_iPhone6+.xib */,
 				335EB03B1D6C75220088149C /* FavoritesTableViewController.swift */,
 				33040B791D66536000C94834 /* HomeViewController.swift */,
 				33040B761D6626CA00C94834 /* DJIPlaybackMultiSelectViewController.h */,
@@ -293,7 +302,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3353F9AA1D76510200EDD820 /* DJIPlaybackMultiSelectViewController_iPad.xib in Resources */,
+				3353F9AB1D76510200EDD820 /* DJIPlaybackMultiSelectViewController_iPhone6+.xib in Resources */,
 				A4F5010F1B452220003A82BF /* Main.storyboard in Resources */,
+				3353F9A91D76510200EDD820 /* DJIPlaybackMultiSelectViewController_iPhone6.xib in Resources */,
 				A4F501141B452220003A82BF /* LaunchScreen.xib in Resources */,
 				A4F501111B452220003A82BF /* Images.xcassets in Resources */,
 			);
