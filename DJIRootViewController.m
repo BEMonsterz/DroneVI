@@ -4,9 +4,9 @@
 //
 //  Created by Bryan Ayllon on 8/18/16.
 //  Copyright © 2016 DJI. All rights reserved.
-//
 //do this another time i guess?
 #import "DJIRootViewController.h"
+//work on version 2.0 later and don't sell on app store should be open sourced....
 #import <DJISDK/DJISDK.h>
 #import <VideoPreviewer/VideoPreviewer.h>
 #import "DJIPlaybackMultiSelectViewController.h"
